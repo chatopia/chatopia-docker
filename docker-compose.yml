@@ -18,8 +18,8 @@ services:
       - SYNAPSE_LOG_LEVEL=INFO
       # TODO Change this and move it out of the config file
       - POSTGRES_PASSWORD=*EW>6,?3f3TLP2ikPdZs
-        #- SYNAPSE_ACME=1
-      - SYNAPSE_NO_TLS=1
+      - SYNAPSE_ACME=1
+        #- SYNAPSE_NO_TLS=1
     #volumes:
       # You may either store all the files in a local folder
       # - ./files:/data
@@ -33,9 +33,10 @@ services:
     # In order to expose Synapse, remove one of the following, you might for
     # instance expose the TLS port directly:
     ports:
-      #- "8448:8448/tcp"
-      - "8008:8008/tcp"
-        #- "8009:80/tcp"
+      - "8448:8448/tcp"
+      # Devs should map 8008 locally for http testing
+      #- "8008:8008/tcp"
+      - "8009:80/tcp" # Necessary for automatic certificate requests
     # ... or use a reverse proxy, here is an example for traefik:
     #labels:
     #- traefik.enable=true
