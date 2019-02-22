@@ -6,10 +6,6 @@ version: '3'
 services:
 
   synapse:
-    build:
-      context: ../synapse
-      dockerfile: docker/Dockerfile
-
     image: docker.io/chatopia/synapse:latest
     # Since synapse does not retry to connect to the database, restart upon
     # failure
@@ -64,9 +60,6 @@ services:
       - "6667:6667/tcp"
 
   bridge:
-    build:
-      context: ../matrix-appservice-irc
-
     image: chatopia/matrix-appservice-irc:latest
     depends_on:
       - irc
