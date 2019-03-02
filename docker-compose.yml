@@ -36,7 +36,7 @@ services:
       - "8448:8448/tcp"
       # Devs should map 8008 locally for http testing
       #- "8008:8008/tcp"
-      - "8009:80/tcp" # Necessary for automatic certificate requests
+      - "80:8009/tcp" # Necessary for automatic certificate requests
     # ... or use a reverse proxy, here is an example for traefik:
     #labels:
     #- traefik.enable=true
