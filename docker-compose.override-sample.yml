@@ -6,7 +6,6 @@ services:
     build:
       context: ../synapse
       dockerfile: docker/Dockerfile
-    image: docker.io/chatopia/synapse:latest
     environment:
       # Don't try to get a cert, run in insecure mode
       - SYNAPSE_ACME=0
@@ -17,4 +16,3 @@ services:
 
   bridge:
     build: ../matrix-appservice-irc
-    image: chatopia/matrix-appservice-irc:latest
