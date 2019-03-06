@@ -19,7 +19,7 @@ services:
       # TODO Change this and move it out of the config file
       - POSTGRES_PASSWORD=*EW>6,?3f3TLP2ikPdZs
       - SYNAPSE_ACME=1
-        #- SYNAPSE_NO_TLS=1
+      #- SYNAPSE_NO_TLS=1
     #volumes:
       # You may either store all the files in a local folder
       # - ./files:/data
@@ -45,7 +45,6 @@ services:
 
   db:
     image: docker.io/postgres:10-alpine
-    # Change that password, of course!
     environment:
       - POSTGRES_USER=synapse
       - POSTGRES_PASSWORD=*EW>6,?3f3TLP2ikPdZs

@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  synapse:
+    build:
+      context: ../synapse
+      dockerfile: docker/Dockerfile
+    image: docker.io/chatopia/synapse:latest
+    environment:
+      # Don't try to get a cert, run in insecure mode
+      - SYNAPSE_ACME=0
+      - SYNAPSE_NO_TLS=1
+    ports:
+      # Map the insecure port for local dev
+      - "8008:8008/tcp"
+
+  bridge:
+    build: ../matrix-appservice-irc
+    image: chatopia/matrix-appservice-irc:latest
