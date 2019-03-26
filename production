@@ -1,0 +1,11 @@
+#!/bin/sh
+
+OVERRIDE_FILE=docker-compose.override.yml
+
+if test ! -L $OVERRIDE_FILE -a -e $OVERRIDE_FILE; then
+  echo "$OVERRIDE_FILE is a regular file, will not replace with symbolic link"
+  exit 1
+fi
+
+rm $OVERRIDE_FILE
+ln -s docker-compose.prod.override.yml $OVERRIDE_FILE
