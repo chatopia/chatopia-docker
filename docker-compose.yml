@@ -12,6 +12,8 @@ services:
     restart: unless-stopped
     # See the readme for a full documentation of the environment settings
     environment:
+      # There are many other supported environment variables that are not
+      # used here. See https://hub.docker.com/r/matrixdotorg/synapse/
       - SYNAPSE_SERVER_NAME=chat.sneakyfrog.com
       - SYNAPSE_REPORT_STATS=no
       - SYNAPSE_ENABLE_REGISTRATION=yes
@@ -19,7 +21,6 @@ services:
       # TODO Change this and move it out of the config file
       - POSTGRES_PASSWORD=*EW>6,?3f3TLP2ikPdZs
       - SYNAPSE_ACME=1
-      #- SYNAPSE_NO_TLS=1
     depends_on:
       - db
       - bridge
