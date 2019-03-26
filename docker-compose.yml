@@ -28,14 +28,7 @@ services:
     # instance expose the TLS port directly:
     ports:
       - "8448:8448/tcp"
-      # Devs should map 8008 locally for http testing
-      #- "8008:8008/tcp"
       - "80:8009/tcp" # Necessary for automatic certificate requests
-    # ... or use a reverse proxy, here is an example for traefik:
-    #labels:
-    #- traefik.enable=true
-    #- traefik.frontend.rule=Host:my.matrix.Host
-    #- traefik.port=8008
 
   db:
     image: docker.io/postgres:10-alpine
