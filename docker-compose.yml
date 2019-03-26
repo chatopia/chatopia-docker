@@ -18,7 +18,6 @@ services:
       - SYNAPSE_REPORT_STATS=no
       - SYNAPSE_ENABLE_REGISTRATION=yes
       - SYNAPSE_LOG_LEVEL=INFO
-      - SYNAPSE_APPSERVICES=/conf/irc-bridge-registration.yaml
       # TODO Change this and move it out of the config file
       - POSTGRES_PASSWORD=*EW>6,?3f3TLP2ikPdZs
       - SYNAPSE_ACME=1
