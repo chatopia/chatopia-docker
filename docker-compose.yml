@@ -1,7 +1,7 @@
 # This compose file is compatible with Compose itself, it might need some
 # adjustments to run properly with stack.
 
-version: '3'
+version: '3.2'
 
 services:
 
@@ -40,6 +40,11 @@ services:
     image: inspircd/inspircd-docker:latest
     ports:
       - "6667:6667/tcp"
+    volumes:
+      - type: bind
+        source: ./irc/conf
+        target: /inspircd/conf
+        read_only: true
 
   bridge:
     image: chatopia/matrix-appservice-irc:latest
