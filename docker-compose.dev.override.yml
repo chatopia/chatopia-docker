@@ -16,3 +16,8 @@ services:
 
   bridge:
     build: ../matrix-appservice-irc
+
+  javabots:
+    build:
+      context: ../bots
+      dockerfile: Dockerfile-javabots

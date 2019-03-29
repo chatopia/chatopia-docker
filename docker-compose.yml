@@ -61,3 +61,8 @@ services:
       - "config/appservice-registration-irc.yaml"
       - "-p"
       - "9999"
+
+  javabots:
+    image: chatopia/javabots:latest
+    depends_on:
+      - irc
