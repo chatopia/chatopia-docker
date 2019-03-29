@@ -63,6 +63,6 @@ services:
       - "9999"
 
   javabots:
-    image: chatopia/javabots:latest
+    image: dougmcbride/javabots:latest
     depends_on:
       - irc
