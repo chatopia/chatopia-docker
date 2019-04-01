@@ -11,6 +11,8 @@ services:
       # - ./files:/data
       # - /path/to/ssd:/data/uploads
       # - /path/to/large_hdd:/data/media
+    ports:
+      - "80:8009/tcp" # Necessary for automatic certificate requests
 
   db:
     volumes:

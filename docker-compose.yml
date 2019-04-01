@@ -28,7 +28,6 @@ services:
     # instance expose the TLS port directly:
     ports:
       - "8448:8448/tcp"
-      - "80:8009/tcp" # Necessary for automatic certificate requests
 
   db:
     image: docker.io/postgres:10-alpine
