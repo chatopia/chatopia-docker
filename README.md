@@ -19,11 +19,11 @@ When its database creation dust settles, you should be able to connect to Synaps
 Clone the component(s) you want to work on:
 #### Synapse server (which implements the Matrix chat API)
 ```bash
-git clone git@github.com:chatopia/synapse.git
+git clone https://github.com/chatopia/synapse.git
 ```
 #### IRC<->Matrix bridge
 ```bash
-git clone git@github.com:chatopia/matrix-appservice-irc.git
+git clone https://github.com/chatopia/matrix-appservice-irc.git
 ```
 #### IRC bots
 ```bash

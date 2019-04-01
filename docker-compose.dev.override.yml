@@ -5,7 +5,7 @@ version: '3.2'
 
 services:
 
-  # Clone from git@github.com:chatopia/synapse.git
+  # Clone from https://github.com/chatopia/synapse.git
   synapse:
 #    build:
 #      context: ../synapse
@@ -18,7 +18,7 @@ services:
       # Map the insecure port for local dev
       - "8008:8008/tcp"
 
-  # Clone from git@github.com:chatopia/matrix-appservice-irc.git
+  # Clone from https://github.com/chatopia/matrix-appservice-irc.git
   bridge:
 #    build:
 #      context: ../matrix-appservice-irc
