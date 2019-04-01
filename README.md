@@ -16,6 +16,20 @@ docker-compose up
 When its database creation dust settles, you should be able to connect to Synapse at `http://localhost:8008` using Riot or another client and create an account. Then you can `/join #irc_#spot` or any other room that the bots hang out in (`#irc_#botopia` obviously, or `#irc_#botsbotsbots` for the whole crowd). Adding the `--detach` option to this command will run the containers in the background and not spit out logs.
 
 ## Developing locally
+Clone the component(s) you want to work on:
+#### Synapse server (which implements the Matrix chat API)
+```bash
+git clone git@github.com:chatopia/synapse.git
+```
+#### IRC<->Matrix bridge
+```bash
+git clone git@github.com:chatopia/matrix-appservice-irc.git
+```
+#### IRC bots
+```bash
+git clone git@sneakyfrog.com:bots.git
+```
+
 Edit `docker-compose.dev.override.yml` and uncomment the build context(s) for the component(s) you're working on. Change the directory if necessary to match your workspace structure.
 
 At this point `docker-compose up` should build your local version if it contains any changes.
