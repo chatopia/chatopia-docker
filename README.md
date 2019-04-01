@@ -13,7 +13,7 @@ This will create a symbolic link from `docker-compose.override.yml` (which docke
 docker-compose up
 ```
 
-When its database creation dust settles, you should be able to connect to Synapse at `http://localhost:8008` using Riot or another client and create an account. Then you can `/join #irc_#spot` or any other room that the bots hang out in (`#botopia` obviously, or `#botsbotsbots` for the whole crowd). Adding the `--detach` option to this command will run the containers in the background and not spit out logs.
+When its database creation dust settles, you should be able to connect to Synapse at `http://localhost:8008` using Riot or another client and create an account. Then you can `/join #irc_#spot` or any other room that the bots hang out in (`#irc_#botopia` obviously, or `#irc_#botsbotsbots` for the whole crowd). Adding the `--detach` option to this command will run the containers in the background and not spit out logs.
 
 ## Developing locally
 Edit `docker-compose.dev.override.yml` and uncomment the build context(s) for the component(s) you're working on. Change the directory if necessary to match your workspace structure.
