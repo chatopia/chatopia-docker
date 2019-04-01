@@ -1,11 +1,14 @@
 version: '3.2'
 
+# Uncomment the build context information for any images that you're modifying locally
+# and point them to the proper directory(ies).
+
 services:
 
   synapse:
-    build:
-      context: ../synapse
-      dockerfile: docker/Dockerfile
+    #build:
+    #context: ../synapse
+    #dockerfile: docker/Dockerfile
     environment:
       # Don't try to get a cert, run in insecure mode
       - SYNAPSE_ACME=0
@@ -15,14 +18,14 @@ services:
       - "8008:8008/tcp"
 
   bridge:
-    build: ../matrix-appservice-irc
+    #build: ../matrix-appservice-irc
 
   javabots:
-    build:
-      context: ../bots
-      dockerfile: Dockerfile-javabots
+    #build:
+    #context: ../bots
+    #dockerfile: Dockerfile-javabots
 
   mobot:
-    build:
-      context: ../bots
-      dockerfile: Dockerfile-mobot
+    #build:
+    #context: ../bots
+    #dockerfile: Dockerfile-mobot
