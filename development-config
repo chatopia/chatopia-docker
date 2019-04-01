@@ -7,5 +7,5 @@ if test ! -L $OVERRIDE_FILE -a -e $OVERRIDE_FILE; then
   exit 1
 fi
 
-rm $OVERRIDE_FILE
+rm -f $OVERRIDE_FILE
 ln -s docker-compose.dev.override.yml $OVERRIDE_FILE
