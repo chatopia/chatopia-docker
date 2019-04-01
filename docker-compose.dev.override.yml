@@ -1,10 +1,11 @@
 version: '3.2'
 
 # Uncomment the build context information for any images that you're modifying locally
-# and point them to the proper directory(ies).
+# and point the "context"(s) to the path(s) of your local workspace(s).
 
 services:
 
+  # Clone from git@github.com:chatopia/synapse.git
   synapse:
 #    build:
 #      context: ../synapse
@@ -17,15 +18,18 @@ services:
       # Map the insecure port for local dev
       - "8008:8008/tcp"
 
+  # Clone from git@github.com:chatopia/matrix-appservice-irc.git
   bridge:
 #    build:
 #      context: ../matrix-appservice-irc
 
+  # Clone from git@sneakyfrog.com:bots.git
   javabots:
 #    build:
 #      context: ../bots
 #      dockerfile: Dockerfile-javabots
 
+  # Clone from git@sneakyfrog.com:bots.git (also)
   mobot:
 #    build:
 #      context: ../bots
