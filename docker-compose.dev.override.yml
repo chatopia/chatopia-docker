@@ -21,3 +21,8 @@ services:
     build:
       context: ../bots
       dockerfile: Dockerfile-javabots
+
+  mobot:
+    build:
+      context: ../bots
+      dockerfile: Dockerfile-mobot
