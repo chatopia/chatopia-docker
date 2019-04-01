@@ -50,9 +50,6 @@ services:
     image: chatopia/matrix-appservice-irc:latest
     depends_on:
       - irc
-    # We may not need this open to the host
-    ports:
-      - "9999:9999/tcp"
     entrypoint:
       - "/app/docker/start.sh"
       - "-c"
