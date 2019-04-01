@@ -66,3 +66,8 @@ services:
     image: dougmcbride/javabots:latest
     depends_on:
       - irc
+
+  mobot:
+    image: chatopia/mobot:latest
+    depends_on:
+      - irc
