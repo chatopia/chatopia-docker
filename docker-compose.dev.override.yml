@@ -6,9 +6,9 @@ version: '3.2'
 services:
 
   synapse:
-    #build:
-    #context: ../synapse
-    #dockerfile: docker/Dockerfile
+#    build:
+#      context: ../synapse
+#      dockerfile: docker/Dockerfile
     environment:
       # Don't try to get a cert, run in insecure mode
       - SYNAPSE_ACME=0
@@ -18,14 +18,15 @@ services:
       - "8008:8008/tcp"
 
   bridge:
-    #build: ../matrix-appservice-irc
+#    build:
+#      context: ../matrix-appservice-irc
 
   javabots:
-    #build:
-    #context: ../bots
-    #dockerfile: Dockerfile-javabots
+#    build:
+#      context: ../bots
+#      dockerfile: Dockerfile-javabots
 
   mobot:
-    #build:
-    #context: ../bots
-    #dockerfile: Dockerfile-mobot
+#    build:
+#      context: ../bots
+#      dockerfile: Dockerfile-mobot
