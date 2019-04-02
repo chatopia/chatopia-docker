@@ -22,6 +22,8 @@ services:
   bridge:
 #    build:
 #      context: ../matrix-appservice-irc
+    environment:
+      - CREATE_TESTING_ROOM=1
 
   # Clone from git@sneakyfrog.com:bots.git
   javabots:
