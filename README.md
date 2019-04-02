@@ -1,4 +1,4 @@
-# docker-config
+# Chatopia project Docker configuration
 
 ## Running locally
 From your local root directory of this repo:
