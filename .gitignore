@@ -2,3 +2,5 @@ files
 schemas
 
 docker-compose.override.yml
+
+.python-version
