@@ -23,7 +23,6 @@ services:
       - SYNAPSE_ACME=1
     depends_on:
       - db
-      - bridge
     # In order to expose Synapse, remove one of the following, you might for
     # instance expose the TLS port directly:
     ports:
@@ -49,6 +48,7 @@ services:
     image: chatopia/matrix-appservice-irc:latest
     depends_on:
       - irc
+      - synapse
     entrypoint:
       - "/app/docker/start.sh"
       - "-c"
