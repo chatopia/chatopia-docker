@@ -13,7 +13,26 @@ This will create a symbolic link from `docker-compose.override.yml` (which docke
 docker-compose up
 ```
 
-When its database creation dust settles, you should be able to connect to Synapse at `http://localhost:8008` using Riot or another client and create an account. Then you can `/join #irc_#spot` or any other room that the bots hang out in (`#irc_#botopia` obviously, or `#irc_#botsbotsbots` for the whole crowd). Adding the `--detach` option to this command will run the containers in the background and not spit out logs.
+Adding the `--detach` option to this command will run the containers in the background and not spit out logs.
+
+To try out your new server:
+
+* Go to <https://riot.im/app/#/login>
+* Click _Create Account_
+* Click on _Advanced / Other_
+* Enter <http://localhost:8008> for _Home Server URL_
+* Click Next
+* Pick a username and password
+* Click _Register_
+* Hit _Continue_ to ignore the email warning
+
+There will be an annoying pause for now and then an error creating room message until we fix <https://www.pivotaltracker.com/story/show/165073247>. Just click OK and then you can join the _Empty Room_ on the left.
+Type
+```irc
+/join #_test
+```
+That should take you to the test room, and then you can interact with the bots.
+
 
 ## Developing locally
 Clone the component(s) you want to work on:
