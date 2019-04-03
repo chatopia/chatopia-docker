@@ -7,7 +7,7 @@ From your local root directory of this repo:
 ./development-config
 ```
 
-This will create a symbolic link from `docker-compose.override.yml` (which docker-compose knows to look for) to the dev override file, which contains a couple changes necessary to run locally. 
+This just creates a symbolic link from `docker-compose.override.yml` (which docker-compose knows to look for) to `docker-compose.dev.override.yml`, which contains a couple changes necessary to run in a local development environment. 
 
 ```bash
 docker-compose up
