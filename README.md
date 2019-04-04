@@ -21,7 +21,7 @@ To try out your new server:
 * Click _Change_ in the upper right to not use `matrix.org`
 * Enter <http://localhost:8008> for _Home Server URL_
 * Click Next
-* Log in with `user` / `password`
+* Log in with (literally) `user` / `password`
 
 Click on the _Testing Room_ in the left sidebar. Then you can interact with the bots.
 
