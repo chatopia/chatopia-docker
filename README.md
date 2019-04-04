@@ -49,7 +49,7 @@ At this point `docker-compose up` should build your local version if it contains
 To publish your changes, run `docker-compose push`.
 
 ## Deployment
-### On an existing instance
+### On an existing DigitalOcean instance
 ```bash
 ssh root@chat.sneakyfrog.com  # or IP address
 cd docker-config
