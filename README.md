@@ -18,21 +18,14 @@ Adding the `--detach` option to this command will run the containers in the back
 To try out your new server:
 
 * Go to <https://riot.im/app/#/login>
-* Click _Create Account_
-* Click on _Advanced / Other_
+* Click _Change_ in the upper right to not use `matrix.org`
 * Enter <http://localhost:8008> for _Home Server URL_
 * Click Next
-* Pick a username and password
-* Click _Register_
-* Hit _Continue_ to ignore the email warning
+* Log in with `user` / `password`
 
-There will be an annoying pause for now and then an error creating room message until we fix <https://www.pivotaltracker.com/story/show/165073247>. Just click OK and then you can join the _Empty Room_ on the left.
-Type
-```irc
-/join #_test
-```
-That should take you to the test room, and then you can interact with the bots.
+Click on the _Testing Room_ in the left sidebar. Then you can interact with the bots.
 
+You can change the username and password of the test account in the `docker-compose.dev.override.yml` file, as well as the IRC channel to join.
 
 ## Developing locally
 Clone the component(s) you want to work on:
