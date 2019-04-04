@@ -23,7 +23,12 @@ services:
 #    build:
 #      context: ../matrix-appservice-irc
     environment:
-      - CREATE_TESTING_ROOM=1
+      - BOOTSTRAP_FOR_TESTING=1
+# Uncomment any of these to override the defaults
+#      - TEST_MATRIX_ROOM=#_test
+#      - TEST_IRC_CHANNEL=#botsbotsbots
+#      - TEST_USERNAME=user
+#      - TEST_PASSWORD=password
 
   # Clone from git@sneakyfrog.com:bots.git
   javabots:
