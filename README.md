@@ -10,6 +10,7 @@ From your local root directory of this repo:
 This just creates a symbolic link from `docker-compose.override.yml` (which docker-compose knows to look for) to `docker-compose.dev.override.yml`, which contains a couple changes necessary to run in a local development environment. 
 
 ```bash
+docker-compose pull  # If you've pulled images before this will update them.
 docker-compose up
 ```
 
