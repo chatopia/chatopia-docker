@@ -1,20 +1,21 @@
 # Chatopia project Docker configuration
 
 ## Running locally
-From your local root directory of this repo:
+From your local clone of this repo:
 
 ```bash
 ./development-config
-```
-
-This just creates a symbolic link from `docker-compose.override.yml` (which docker-compose knows to look for) to `docker-compose.dev.override.yml`, which contains a couple changes necessary to run in a local development environment. 
-
-```bash
-docker-compose pull  # If you've pulled images before this will update them.
 docker-compose up
 ```
 
-Adding the `--detach` option to this command will run the containers in the background and not spit out logs.
+The first script creates a symbolic link from `docker-compose.override.yml` (which docker-compose knows to look for) to `docker-compose.dev.override.yml`, which contains a couple changes necessary to run in a local development environment. 
+
+Using `docker-compose up --detach` instead will run the containers in the background and not spit out logs.
+
+If you've already pulled images and want to get the latest ones, you'll need to run this. `docker-compose up` will not replace any images you've pulled down previoiusly with newer ones.
+```bash
+docker-compose pull
+```
 
 To try out your new server:
 
