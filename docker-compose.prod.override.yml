@@ -5,14 +5,13 @@ services:
   synapse:
     volumes:
       # You may either store all the files in a local folder
-      # - ./files:/data
       - /mnt/volume_sfo2_01/synapse/data:/data
       # .. or you may split this between different storage points
       # - ./files:/data
       # - /path/to/ssd:/data/uploads
       # - /path/to/large_hdd:/data/media
     ports:
-      - "80:8009/tcp" # Necessary for automatic certificate requests
+      - "80:8009/tcp" # http, used for automatic certificate requests (ACME)
 
   db:
     volumes:

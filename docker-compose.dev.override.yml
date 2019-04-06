@@ -1,30 +1,28 @@
 version: '3.2'
 
 # Uncomment the build context information for any images that you're modifying locally
-# and point the "context"(s) to the path(s) of your local workspace(s).
+# and point their "context"(s) to the path(s) of your local workspace(s).
 
 services:
 
-  # Clone from https://github.com/chatopia/synapse.git
+# Clone from https://github.com/chatopia/synapse.git
   synapse:
 #    build:
 #      context: ../synapse
 #      dockerfile: docker/Dockerfile
     environment:
-      # Don't try to get a cert, run in insecure mode
-      - SYNAPSE_ACME=0
-      - SYNAPSE_NO_TLS=1
+      - SYNAPSE_ACME=0    # Don't try to get a cert
+      - SYNAPSE_NO_TLS=1  # Run in insecure mode
     ports:
-      # Map the insecure port for local dev
-      - "8008:8008/tcp"
+      - "8008:8008/tcp"  # http, for local testing
 
-  # Clone from https://github.com/chatopia/matrix-appservice-irc.git
+# Clone from https://github.com/chatopia/matrix-appservice-irc.git
   bridge:
 #    build:
 #      context: ../matrix-appservice-irc
     environment:
-      - BOOTSTRAP_FOR_TESTING=1
-# Uncomment any of these to override the defaults
+      - BOOTSTRAP_FOR_TESTING=1  # Create user and a room bridged to IRC
+# Uncomment to override these defaults
 #      - TEST_MATRIX_ROOM=#_test
 #      - TEST_IRC_CHANNEL=#botsbotsbots
 #      - TEST_USERNAME=user
