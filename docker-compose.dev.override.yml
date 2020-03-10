@@ -8,8 +8,7 @@ services:
 # Clone from https://github.com/chatopia/synapse.git
   synapse:
 #    build:
-#      context: ../synapse
-#      dockerfile: docker/Dockerfile
+#      context: ../synapse-configured
     environment:
       - SYNAPSE_ACME=0    # Don't try to get a cert
       - SYNAPSE_NO_TLS=1  # Run in insecure mode

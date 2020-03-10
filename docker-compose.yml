@@ -3,7 +3,7 @@ version: '3.2'
 services:
 
   synapse:
-    image: docker.io/chatopia/synapse:latest
+    image: docker.io/chatopia/synapse-configured:latest
     # Since synapse does not retry to connect to the database, restart upon
     # failure
     restart: unless-stopped
